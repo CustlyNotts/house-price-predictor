@@ -1,9 +1,7 @@
 name: MLops CI
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch: {}
 jobs:
   e2e_mlops_workflow:
     runs-on: ubuntu-latest
@@ -69,6 +67,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: surajsingh16/fastapi:${{ github.sha }}
+          tags: custlynotts/fastapi:${{ github.sha }}
           context: "."
           file: "Dockerfile"

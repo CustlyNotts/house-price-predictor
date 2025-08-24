@@ -1,27 +1,27 @@
 name: MLOps Piepline
 
 on:
-  # workflow_dispatch:
-  #   inputs:
-  #       run_all:
-  #           description: 'Run all jobs'
-  #           required: false
-  #           default: 'true'
-  #       run_data_processing:
-  #           description: 'Run data processing job'
-  #           required: false
-  #           default: 'false'
-  #       run_model_training:
-  #           description: 'Run model training job'
-  #           required: false
-  #           default: 'false'
-  #       run_build_and_pushlish:
-  #           description: 'Build and Push job'
-  #           required: false
-  #           default: 'false'
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+        run_all:
+            description: 'Run all jobs'
+            required: false
+            default: 'true'
+        run_data_processing:
+            description: 'Run data processing job'
+            required: false
+            default: 'false'
+        run_model_training:
+            description: 'Run model training job'
+            required: false
+            default: 'false'
+        run_build_and_pushlish:
+            description: 'Build and Push job'
+            required: false
+            default: 'false'
+  # push:
+  #   branches:
+  #     - main
 
 jobs:
     data-processing:
